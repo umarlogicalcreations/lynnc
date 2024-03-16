@@ -1,0 +1,26 @@
+.header-container{
+    position: relative;
+    margin-bottom: 50px;
+}
+.header-container video{
+    position: relative;
+    z-index: 0;
+}
+.vid-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-down-pos{
+    bottom: -25px;
+    left: 50%;
+    position: absolute;
+}
+

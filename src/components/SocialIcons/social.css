@@ -1,0 +1,21 @@
+.social {
+    /* position: absolute; */
+    top: 303px;
+    right: 131px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.social-icon {
+    height: 22px;
+    width: 22px;
+}
+
+.social-icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,122 @@
+.footer-main-outer{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 38px 38px 0px 0px;
+    position: relative;
+}
+.footer-outer-layer{
+    position: relative;
+}
+.footer-main-outer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.footer-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.318); */
+    background-color: #3b60646e;
+}
+.scroll-up-pos{
+    position: absolute;
+    right: 50px;
+    top: -30px;
+    z-index: 999;
+}
+.footer-main-centent{
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: 230px;
+    margin-top: 90px;
+    display: flex; 
+}
+.footer-main-centent div:nth-of-type(1) {flex-grow: 3;}
+.footer-main-centent div:nth-of-type(2) {flex-grow: 1;}
+.footer-main-centent div:nth-of-type(3) {flex-grow: 1;}
+.footer-main-centent div:nth-of-type(4) {flex-grow: 1;}
+.footer-main-centent div:nth-of-type(5) {flex-grow: 1;}
+.logo-section-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-start-first-style{
+    font-size: 20px;
+    line-height: 22px;
+    color: #05D35D;
+    font-weight: 700;
+}
+.footer-bottom-words-style{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.logo-in-footer{
+    margin-bottom: 40px;
+}
+.footer-price-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.social-icon{
+    height: 30px;
+    width: 30px;
+
+}
+.wrapper-logo-social{
+    display: flex;
+    align-items: center;
+    height: 100%;
+} 
+.social-icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.sub-footer-price-section{ 
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.hr-line{
+    color: white;
+    border: 1px solid white;
+}
+.footer-copy-rights{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.footer-copy-rights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-terms-privacy{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.copy-rights-text p{
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+}
+.section-terms-privacy p{
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+}

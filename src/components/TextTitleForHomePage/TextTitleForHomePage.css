@@ -1,0 +1,43 @@
+.witness_the_efficiency-title-section {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.witness_the_efficiency-title {
+    /* background-color: rgba(5, 211, 93, 1); */
+    width: auto;
+    height: 27px;
+    border-radius: 100px;
+    /* padding: 5px 25px 5px 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.witness_the_efficiency-title p {
+    text-transform: uppercase;
+    color: rgba(5, 211, 93, 1);
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+}
+
+.witness_the_efficiency-text1 span {
+    font-weight: 700;
+    font-size: 44px;
+    text-transform: capitalize;
+}
+
+.witness_the_efficiency-text2 span {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.meet-us-arrow{
+    height: 27px;
+    width: 27px;
+}

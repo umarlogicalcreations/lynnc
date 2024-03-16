@@ -1,0 +1,70 @@
+.revolution-section {
+    width: 679px;
+    height: 212.65px;
+    top: 229.82px;
+    Left: 149px;
+    /* position: absolute; */
+    color: #F3FDFE;
+    display: flex;
+    flex-direction: column;
+}
+.revolution-outer{ 
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+.revolution-inner{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.revolution-section .p1 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F3FDFE;
+    margin: 0;
+    
+
+
+}
+
+.revolution-section .p2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F3FDFE;
+    margin: 0;
+}
+
+.revo-special {
+    color: #05D35D;
+    font-style: italic;
+    text-transform: capitalize;
+    /* animation-name: HeaderTextAnim;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out; */
+    
+}
+
+/* @keyframes HeaderTextAnim {
+    0% {
+        transform:translate(0px, 1px);
+    }
+
+    50% {
+        transform:translate(0px, 21px);
+    }
+
+    100% {
+        transform:translate(0px, 1px);
+    }
+} */

@@ -1,0 +1,33 @@
+.ScrollUpBtnBtnStyle {
+    width: 65px;
+    height: 85px;
+    background-color: #05D35D;
+    border: 10px solid white;
+    border-radius: 40px;
+    position: relative;
+    transform: rotate(0.5turn);
+}
+
+.ScrollUpBtnBtnStyle .btn-arrow-style {
+    top: 0;
+    position: absolute;
+    animation-name: scrollBtnUpAnim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    
+}
+
+@keyframes scrollBtnUpAnim {
+    0% {
+        transform:translate(0px, 1px);
+    }
+
+    50% {
+        transform:translate(0px, 21px);
+    }
+
+    100% {
+        transform:translate(0px, 1px);
+    }
+}

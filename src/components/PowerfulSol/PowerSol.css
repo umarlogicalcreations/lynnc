@@ -1,0 +1,124 @@
+.powerful-content-main{
+    width: 100%;
+    height: 654px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(59, 96, 100, 0.05);
+    margin-bottom: 100px;
+    
+}
+.main-outer{
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.powerful-content-main-heading{
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+    width: 100%;
+}
+.powerful-content-main-description{
+    width: 100%;
+    height: 422px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    width: 740px;
+    
+}
+.man-with-cap{
+    overflow: hidden;
+    margin-right: 20px;
+    min-width: 40%;
+}
+.man-with-cap img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    left: -40px;
+    position: relative;
+}
+.text-menu-engineering{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+   
+
+}
+.text-menu-engineering-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.read-more-green{
+    background-color: transparent;
+    border: none;
+}
+.read-more-green span{
+    text-decoration: underline;
+    color: rgba(5, 211, 93, 1);
+    font-weight: 400;
+   
+}
+.menu-engineering-text span{
+    font-weight: 500;
+    font-size: 36px;
+    color: rgba(24, 63, 48, 1);
+}
+.menu-text-description span{
+    font-size: 17px;
+    font-weight: 300;
+}
+.image-section{
+    width: 100%;
+    display: flex;
+    height: 422px;
+    gap: 10px;
+}
+.img-1{
+    width: 50%;
+    height: 100%;
+    background-image: url("../../../public/box_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.box_1_text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.413);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px 16px;
+}
+
+.laptop-1{
+    width: 50%;
+    height: 100%;
+    background-image: url("../../../public/laptop_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.box_1_text span{
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    text-align: end;
+}

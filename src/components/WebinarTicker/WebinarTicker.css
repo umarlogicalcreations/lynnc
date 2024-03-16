@@ -1,0 +1,52 @@
+.pop-header { 
+    background: #183F30;
+    /* position: absolute; */
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 6px 103px 16px 96px; */
+}
+.remaining-time {
+    width: 290px;
+    height: 18px;
+    left: 0px;
+    top: 0px;
+}
+
+.remaining-time p{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #05D35D;
+}
+.attend-webinar p{
+    font-family: 'Ubuntu';
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+.sign-up-btn {
+    background: #05D35D;
+    width: 102px;
+    height: 32px;
+    /* padding: 8px 24px 8px 24px; */
+    border-radius: 100px;
+    color: #183F30;
+    border-radius: 100px;
+    outline: none;
+    border: 1px solid #05D35D;
+    font-family: 'Ubuntu';
+}
+.cross-btn{
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}

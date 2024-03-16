@@ -1,0 +1,171 @@
+.trend-outer-section {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outer-basic {
+    background-image: url("../../../public/trending_pic_left.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    /* background-color: rgba(0, 0, 0, 0.37); */
+    gap: 10px;
+    position: relative;
+    right: 0;
+    width: 645px;
+    height: 182px;
+    border-radius: 12px;
+}
+
+.trending-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    top: 18px;
+    position: absolute;
+    gap: 20px;
+
+}
+
+.img-inside img {
+    width: 164px;
+    height: 145px;
+    border-radius: 16px;
+}
+
+.trending-inside-para {
+    width: 300px;
+}
+
+.trending-inside-para h5,
+p {
+    margin: 0;
+}
+
+.trending-inside-para h5 {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(5, 211, 93, 1);
+}
+
+.trending-inside-para p {
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+}
+
+/* .other_trending-lines .trending_pic_1,
+.trending_pic_2,
+.trending_pic_3,
+.trending_pic_4,
+.trending_pic_5,
+.trending_pic_6,
+.trending_pic_7,
+.trending_pic_8,
+.trending_pic_9,
+.trending_pic_10,
+.trending_pic_11 {
+    height: 57px;
+    width: 57px;
+    overflow: hidden;
+    border-radius: 13px;
+} */
+
+.trending_icon_wrapper .trending-icon {
+    height: 57px;
+    width: 57px;
+    overflow: hidden;
+    border-radius: 13px;
+   
+}
+.other_trending-lines { 
+    position: relative;
+    height: auto;
+    width: 200px;
+}
+.other_trending-lines .trending_icon_wrapper{
+    height: 57px;
+    overflow: hidden;
+    border-radius: 13px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    left: -100px;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0% {
+        left: -100px;
+      }
+      50% { 
+        left: calc(100% - 100px); 
+       }
+      100% {
+        left: -100px;     
+      }
+}
+
+.trending_pic_1 {
+    background: #C6234E;
+
+}
+
+.trending_pic_2 {
+    background-color: #D60665;
+
+}
+
+.trending_pic_3 {
+    background-color: #000000;
+
+}
+
+.trending_pic_4 {
+    /* background-color: #FF5A00; */
+    background-color: #ffffff;
+
+}
+
+.trending_pic_5 {
+    background-color: #00CDBD;
+
+}
+
+.trending_pic_6 {
+    background: linear-gradient(228.67deg, #00E784 6.53%, #A6EDF2 89.64%);
+    ;
+
+}
+
+.trending_pic_7 {
+    background-color: #D60665;
+
+}
+
+.trending_pic_8 {
+    background-color: #ffffff;
+
+}
+
+.trending_pic_9 {
+    background-color: #ffffff;
+
+}
+
+.trending_pic_10 {
+    background: #003462;
+
+
+}
+
+.trending_pic_11 {
+    background-color: #D60665;
+
+}
