@@ -47,7 +47,7 @@
 }
 
 .revo-special {
-    color: #05D35D;
+   
     font-style: italic;
     text-transform: capitalize;
     word-wrap: break-word;
@@ -65,6 +65,7 @@
     animation-timing-function: ease-out;
     font-weight: 700;
     font-size: 55.96px;
+    color: #05D35D;
 }
 
 @keyframes HeaderTextAnim {
