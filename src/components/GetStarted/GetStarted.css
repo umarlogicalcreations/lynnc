@@ -51,5 +51,5 @@
 .get-started:hover .arrow{
     width: 0;
     opacity: 0;
-    transition: width 1s ease-out;
+    transition: width 3s ease-out;
 }

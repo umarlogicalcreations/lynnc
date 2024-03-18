@@ -13,10 +13,59 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import Footer from "../../components/Footer/footer"
 import TitleAndDescriptionForSection from "../../components/TextTitleForHomePage/TittleHomePage"
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const clientExperienseCommentsList = [
+    {
+        name: "daisy welch",
+        designation: "expert",
+        comment: "Iusto quia perspiciatis inventore tempora. Velit vitae tempora et laborum id soluta est ut laboriosam. Eveniet possimus autem ratione aliquid in sunt tempora. Amet rerum suscipit distinctio voluptas. In quis voluptas necessitatibus et aut dolor ut quod. Sapiente et adipisci tenetur voluptatibus qui.",
+        profPicPath: "./client.png",
+        companyLogo: "./exp_1.png"
+    },
+    {
+        name: "QB",
+        designation: "chief branding producer",
+        comment: "Iusto quia perspiciatis inventore tempora. Velit vitae tempora et laborum id soluta est ut laboriosam. Eveniet possimus autem ratione aliquid in sunt tempora. Amet rerum suscipit distinctio voluptas. In quis voluptas necessitatibus et aut dolor ut quod. Sapiente et adipisci tenetur voluptatibus qui.",
+        profPicPath: "./client2.jpg",
+        companyLogo: "./exp_2.png"
+    },
+    {
+        name: "Mike Murphey",
+        designation: "manager",
+        comment: "Iusto quia perspiciatis inventore tempora. Velit vitae tempora et laborum id soluta est ut laboriosam. Eveniet possimus autem ratione aliquid in sunt tempora. Amet rerum suscipit distinctio voluptas. In quis voluptas necessitatibus et aut dolor ut quod. Sapiente et adipisci tenetur voluptatibus qui.",
+        profPicPath: "./client3.png",
+        companyLogo: "./exp_3.png"
+    },
+]
 
 const Home = () => {
     const [currencyType, setCurrencyType] = useState("SAR")
+    const [selectedClientIndex, setSelectedClientIndex] = useState(1);
+
+    const clientShareExpContentRef = useRef(null);
+
+    const doSliderForClients = () => {
+
+        if (selectedClientIndex == 1) {
+            setSelectedClientIndex(0);
+            return
+        }
+        if (selectedClientIndex == 0) {
+            setSelectedClientIndex(2)
+            return
+        }
+        if (selectedClientIndex == 2) {
+            setSelectedClientIndex(1)
+            return
+        }
+
+    }
+    useEffect(() => {
+        setInterval(() => {
+            doSliderForClients();
+        }, 5000);
+    }, [])
     const selectCurrencyType = (type) => {
         setCurrencyType(type)
     }
@@ -162,6 +211,11 @@ const Home = () => {
                 </div>
                 <div className="tell-story-section">
                     <div className="tell-story-content">
+                        <video autoPlay muted loop width={"100%"}>
+                            <source src="./tell_story.mp4" />
+                        </video>
+                    </div>
+                    <div className="tell-story-content-inner">
                         <div className="lyncc-tell-story-text">
                             <p><span className="lyncc-alone">LYNNC®</span> numbers tell the Story!</p>
                         </div>
@@ -208,9 +262,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <video autoPlay muted loop width={"100%"}>
-                        <source src="./vid_1.mp4" />
-                    </video>
                 </div>
             </Container>
             <div className="partner-logos">
@@ -683,6 +734,7 @@ const Home = () => {
                     </div>
                     <div className="blogs-flexes">
                         <div className="blog-card blog-card-small">
+                        <img src="./blog_4.png" alt="blog-1" style={{  boxShadow: '3px 3px 3px ', filter: 'blur(3px)', position: "absolute",background: 'linear-gradient(186deg, rgba(0, 0, 0, 0) 4%, black 100%)' }} />
                             <div className="blog-content-text">
                                 <div className="event-wrapper">
                                     <div className="event-blog">
@@ -691,7 +743,7 @@ const Home = () => {
                                 </div>
                                 <div className="blog-content-inner">
                                     <div className="blog-main-text">
-                                        <span>The Future of Order Management in Food & Beverage and Retail</span>
+                                        <span style={{ color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '400',  wordWrap: 'break-word'}}>The Future of Order Management in Food & Beverage and Retail</span>
                                     </div>
                                     <div className="blog-other-info">
                                         <div className="blog-post-read-more">
@@ -704,7 +756,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <img src="./blog_4.png" alt="blog-1" />
+                            {/* <img src="./blog_4.png" alt="blog-1" /> */}
                         </div>
                         <div className="blog-card blog-card-big">
                             <div className="blog-content-text">
@@ -731,6 +783,7 @@ const Home = () => {
                             <img src="./blog_2.png" alt="blog-1" />
                         </div>
                         <div className="blog-card blog-card-small">
+                            <img src="./blog_3.png" alt="blog-1" style={{ filter: 'blur(3px)', position: "absolute" }} />
                             <div className="blog-content-text">
                                 <div className="event-wrapper">
                                     <div className="event-blog">
@@ -752,7 +805,10 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <img src="./blog_3.png" alt="blog-1" />
+                            {/* <div style={{ filter: 'blur(3px)', position: 'absolute' }}>
+                                <img src="./blog_3.png" alt="blog-1" />
+                            </div> */}
+
                         </div>
                         {/* <div className="blog-card">
                             <div className="blog-content-text">
@@ -847,19 +903,34 @@ const Home = () => {
                         </div> */}
                 </div>
                 <div className="client-share-exp-slider">
-                    {/* <div className="client-share-exp-content client-exp-sides-left">
-                            <div className="client-img">
-                                <img src="./client.png" alt="client-img" />
-                            </div>
-                            <div className="client-centent">
-                                <p className="client-centent-detail">Iusto quia perspiciatis inventore tempora. Velit vitae tempora et laborum id soluta est ut laboriosam. Eveniet possimus autem ratione aliquid in sunt tempora. Amet rerum suscipit distinctio voluptas. In quis voluptas necessitatibus et aut dolor ut quod. Sapiente et adipisci tenetur voluptatibus qui.</p>
-                                <div>
-                                    <p className="comp-name">Daisy Welch</p>
-                                    <p className="client-occ">Chief Branding Producer</p>
+                    {clientExperienseCommentsList.map((comm, index) => {
+                        return (
+                            <div style={selectedClientIndex == 0 ? { transform: "translate(880px,0px)" } :
+                                selectedClientIndex == 1 ? { transform: "translate(0px,0px)" } :
+                                    selectedClientIndex == 2 ? { transform: "translate(-880px,0px)" } : {}
+                            } className={selectedClientIndex == index ? "client-share-exp-content active-comment" : "client-share-exp-content"}>
+                                <div className="client-img">
+                                    <img src={comm.profPicPath} alt="client-img" />
+                                </div>
+                                <div className="client-centent">
+                                    <div className="_comma_">
+                                        <img src="./coma_letter.png" alt="coma_letter.png" />
+                                    </div>
+                                    <div>
+                                        <p className="client-centent-detail">{comm.comment}</p>
+                                        <div>
+                                            <p className="comp-name">{comm.name}</p>
+                                            <p className="client-occ">{comm.designation}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> */}
-                    <div className="client-share-exp-content client-exp-middle">
+                        )
+                    })
+
+                    }
+
+                    {/* <div className="client-share-exp-content">
                         <div className="client-img">
                             <img src="./client.png" alt="client-img" />
                         </div>
@@ -876,27 +947,46 @@ const Home = () => {
                             </div>
 
                         </div>
-                    </div>
-                    {/* <div className="client-share-exp-content client-exp-right">
-                            <div className="client-img">
-                                <img src="./client.png" alt="client-img" />
+                    </div> */}
+                    {/* <div className="client-share-exp-content">
+                        <div className="client-img">
+                            <img src="./client.png" alt="client-img" />
+                        </div>
+                        <div className="client-centent">
+                        <div className="_comma_">
+                                <img src="./coma_letter.png" alt="coma_letter.png" />
                             </div>
-                            <div className="client-centent">
+                            <div>
                                 <p className="client-centent-detail">Iusto quia perspiciatis inventore tempora. Velit vitae tempora et laborum id soluta est ut laboriosam. Eveniet possimus autem ratione aliquid in sunt tempora. Amet rerum suscipit distinctio voluptas. In quis voluptas necessitatibus et aut dolor ut quod. Sapiente et adipisci tenetur voluptatibus qui.</p>
                                 <div>
                                     <p className="comp-name">Daisy Welch</p>
                                     <p className="client-occ">Chief Branding Producer</p>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
+                    </div> */}
                 </div>
                 <div className="client-list">
-                    <div className="exp-imgs">
-                        <img src="./exp_1.png" alt="client-list" />
+                    {
+                        clientExperienseCommentsList.map((el, ind) => {
+                            return (
+                                <div className={selectedClientIndex == ind ? "exp-imgs active-exp-img" : "exp-imgs"}>
+                                    <img src={el.companyLogo} alt="client-list" />
+                                </div>
+                            )
+                        })
+                    }
+
+                    {/* <div className="exp-imgs">
                         <img src="./exp_2.png" alt="client-list" />
-                        <img src="./exp_3.png" alt="client-list" />
-                        <img src="./exp_4.png" alt="client-list" />
                     </div>
+                    <div className="exp-imgs">
+                        <img src="./exp_3.png" alt="client-list" />
+                    </div>
+                    <div className="exp-imgs">
+                        <img src="./exp_4.png" alt="client-list" />
+                    </div> */}
+
 
                 </div>
             </div>

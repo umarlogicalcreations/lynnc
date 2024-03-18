@@ -84,8 +84,10 @@ p {
 }
 .other_trending-lines { 
     position: relative;
-    height: auto;
+    height: 182px;
     width: 200px;
+    display: flex;
+    align-items: center;
 }
 .other_trending-lines .trending_icon_wrapper{
     height: 57px;
@@ -97,18 +99,30 @@ p {
     left: -100px;
     position: absolute;
     animation-name: example;
-    animation-duration: 20s;
+    animation-duration: 100s;
     animation-iteration-count: infinite;
 }
-@keyframes example {
+/* @keyframes example {
     0% {
-        left: -100px;
+        left: -600px;
       }
       50% { 
         left: calc(100% - 100px); 
        }
       100% {
         left: -100px;     
+      }
+} */
+
+@keyframes example {
+    0% {
+        transform: translate(-600px,0);
+      }
+      50% { 
+        transform: translate(600px,0);
+       }
+      100% {
+        transform: translate(-600px,0);
       }
 }
 

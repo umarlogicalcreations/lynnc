@@ -30,7 +30,8 @@ export default function RevolutionText() {
                 <div className="revolution-inner">
                     <div className="revolution-section">
                         <p className="p1">Revolution your business with smart solutions.</p>
-                        <p className="p2">LYNCC <span className="revo-special">{changeWord}</span></p>
+                        {/* <p className="p2">LYNCC <span className="revo-special">{changeWord}</span></p> */}
+                        <p className="p2">LYNCC <div className="revo-special"> <p className="revo-special-text">Order Sync Simplified Order</p> </div></p>
                         <GetStarted />
                     </div>
                     <div>

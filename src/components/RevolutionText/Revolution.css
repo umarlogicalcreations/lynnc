@@ -42,29 +42,52 @@
     text-align: left;
     color: #F3FDFE;
     margin: 0;
+    display: inline-flex;
+    
 }
 
 .revo-special {
     color: #05D35D;
     font-style: italic;
     text-transform: capitalize;
-    /* animation-name: HeaderTextAnim;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out; */
+    word-wrap: break-word;
+    width: 276px;
+    height: 60px;
+    overflow: hidden;
+    
     
 }
 
-/* @keyframes HeaderTextAnim {
+.revo-special-text{
+    animation-name: HeaderTextAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    font-weight: 700;
+    font-size: 55.96px;
+}
+
+@keyframes HeaderTextAnim {
     0% {
-        transform:translate(0px, 1px);
+        transform:translate(0px, 0px);
     }
 
-    50% {
-        transform:translate(0px, 21px);
+    20% {
+        transform:translate(0px, -60px);
+    }
+    40% {
+        transform:translate(0px, -120px);
+    }
+
+    60% {
+        transform:translate(0px, -180px);
+    }
+
+    80% {
+        transform:translate(0px, -240px);
     }
 
     100% {
-        transform:translate(0px, 1px);
+        transform:translate(0px, 300px);
     }
-} */
+}
