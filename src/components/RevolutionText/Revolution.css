@@ -1,9 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 .revolution-section {
-    width: 679px;
-    height: 212.65px;
+    width: 600px;
+    height: 224px;
     top: 229.82px;
     Left: 149px;
-    /* position: absolute; */
     color: #F3FDFE;
     display: flex;
     flex-direction: column;
@@ -26,11 +27,12 @@
     font-weight: 500;
     line-height: 75px;
     letter-spacing: 0em;
+    line-height: 74.615px; /* 150% */
     text-align: left;
     color: #F3FDFE;
     margin: 0;
-    
-
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 
 }
 
@@ -43,11 +45,12 @@
     color: #F3FDFE;
     margin: 0;
     display: inline-flex;
-    
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 }
 
 .revo-special {
-   
+    /* font-family: "Ubuntu", sans-serif; */
     font-style: italic;
     text-transform: capitalize;
     word-wrap: break-word;
@@ -66,6 +69,8 @@
     font-weight: 700;
     font-size: 55.96px;
     color: #05D35D;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 }
 
 @keyframes HeaderTextAnim {

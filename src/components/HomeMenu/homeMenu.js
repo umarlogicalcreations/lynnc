@@ -1,7 +1,7 @@
 import "./homemenu.css"
 import LynccLogo from "../lyncc-logo/LynccLogo"
 
-import Link from "next/link"
+import Link from "next/link" 
 
 
 export default function HomeMenu() {

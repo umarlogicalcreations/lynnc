@@ -4,7 +4,7 @@ import Social from "../SocialIcons/social";
 import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
-export default function RevolutionText() {
+export default function RevolutionText() { 
     const changeWordList = ["order","sync","simplified"];
     const [changeWord, setChangeWord] = useState(changeWordList[0]);
     
@@ -29,7 +29,7 @@ export default function RevolutionText() {
             <Container>
                 <div className="revolution-inner">
                     <div className="revolution-section">
-                        <p className="p1">Revolution your business with smart solutions.</p>
+                        <p className="p1">Revolutionize your business with smart solutions</p>
                         {/* <p className="p2">LYNCC <span className="revo-special">{changeWord}</span></p> */}
                         <p className="p2">LYNCC <div className="revo-special"> <p className="revo-special-text">Order Sync Simplified Order</p> </div></p>
                         <GetStarted />

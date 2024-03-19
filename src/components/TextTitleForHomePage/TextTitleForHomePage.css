@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&family=Ubuntu+&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 .witness_the_efficiency-title-section {
 
     width: 100%;
@@ -23,6 +25,7 @@
     font-size: 19px;
     letter-spacing: 2px;
     font-weight: 700;
+    font-family: "Ubuntu", sans-serif;
 
 }
 
@@ -30,12 +33,14 @@
     font-weight: 700;
     font-size: 44px;
     text-transform: capitalize;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .witness_the_efficiency-text2 span {
     font-weight: 400;
     font-size: 20px;
     text-transform: capitalize;
+    font-family: "Ubuntu", sans-serif;
 }
 .meet-us-arrow{
     height: 27px;

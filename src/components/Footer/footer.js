@@ -2,7 +2,7 @@
 import { Container } from "react-bootstrap";
 import ScrollDownBtn from "../ScrollUpBtn/scrollUpBtn";
 import Logo from "../lyncc-logo/LynccLogo"
-import "./footer.css"
+import "./footer.css" 
 
 export default function Footer() {
   return (

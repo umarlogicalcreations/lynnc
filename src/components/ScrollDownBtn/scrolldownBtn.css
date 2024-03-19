@@ -1,15 +1,24 @@
 .scrolldownBtnStyle{
-    width: 65px;
-    height: 85px;
+    width: 78px;
+    height: 117px;
     background-color: #183F30;
     border: 10px solid white;
     border-radius: 40px;
     position: relative;
     /* transform: rotate(0.5turn); */
 }
+.btn-arrow-style{
+    width: 34px;
+    height: 34px;
+}
+.btn-arrow-style img{
+    height: 100%;
+    width: 100%;
+}
 
 .scrolldownBtnStyle .btn-arrow-style {
     top: 0px;
+    left: 12px;
     position: absolute;
     animation-name: scrollBtnDownAnim;
     animation-duration: 3s;
@@ -24,7 +33,7 @@
     }
 
     50% {
-        transform:translate(0px, 23px);
+        transform:translate(0px, 50px);
     }
 
     100% {

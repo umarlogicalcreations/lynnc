@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 .trend-outer-section {
     width: 100%;
     height: 200px;
@@ -7,23 +9,22 @@
 }
 
 .outer-basic {
-    background-image: url("../../../public/trending_pic_left.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    /* background-color: rgba(0, 0, 0, 0.37); */
+
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(69.44999694824219px);
     gap: 10px;
     position: relative;
     right: 0;
     width: 645px;
     height: 182px;
-    border-radius: 12px;
 }
 
 .trending-inside {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 0;
+    left: -30px;
     top: 18px;
     position: absolute;
     gap: 20px;
@@ -49,6 +50,8 @@ p {
     font-weight: 700;
     font-size: 20px;
     color: rgba(5, 211, 93, 1);
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 }
 
 .trending-inside-para p {
@@ -56,6 +59,8 @@ p {
     font-size: 16px;
     color: white;
     text-transform: capitalize;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 }
 
 /* .other_trending-lines .trending_pic_1,
@@ -80,16 +85,19 @@ p {
     width: 57px;
     overflow: hidden;
     border-radius: 13px;
-   
+
 }
-.other_trending-lines { 
+
+.other_trending-lines {
     position: relative;
     height: 182px;
-    width: 200px;
+    width: 779px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
-.other_trending-lines .trending_icon_wrapper{
+
+.other_trending-lines .trending_icon_wrapper {
     height: 57px;
     overflow: hidden;
     border-radius: 13px;
@@ -101,7 +109,10 @@ p {
     animation-name: example;
     animation-duration: 100s;
     animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
 }
+
 /* @keyframes example {
     0% {
         left: -600px;
@@ -116,14 +127,16 @@ p {
 
 @keyframes example {
     0% {
-        transform: translate(-600px,0);
-      }
-      50% { 
-        transform: translate(600px,0);
-       }
-      100% {
-        transform: translate(-600px,0);
-      }
+        transform: translate(-600px, 0);
+    }
+
+    50% {
+        transform: translate(600px, 0);
+    }
+
+    100% {
+        transform: translate(-600px, 0);
+    }
 }
 
 .trending_pic_1 {

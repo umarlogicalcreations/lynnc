@@ -1,3 +1,7 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 .pop-header { 
     background: #183F30;
     /* position: absolute; */
@@ -16,7 +20,7 @@
 }
 
 .remaining-time p{
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -24,12 +28,13 @@
     color: #05D35D;
 }
 .attend-webinar p{
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu", sans-serif;
     font-size: 19px;
     font-weight: 500;
     line-height: 22px;
     letter-spacing: 0em;
     color: #FFFFFF;
+    font-style: normal;
 }
 
 .sign-up-btn {
@@ -38,18 +43,27 @@
     height: 32px;
     /* padding: 8px 24px 8px 24px; */
     border-radius: 100px;
-    color: #183F30;
+   
     border-radius: 100px;
     outline: none;
     border: 1px solid #05D35D;
-    font-family: 'Ubuntu';
+   
+   
+}
+.sign-up-btn{
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
+    color: #183F30;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
 }
 .cross-btn{
     color: #FFFFFF;
     background-color: transparent;
     border: none;
     outline: none;
+    font-family: "Ubuntu Condensed", sans-serif;
+    width: 13px;
+    height: 14px;
 }

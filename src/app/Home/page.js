@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useRef, useState } from "react";
 import Header from "../../components/HeaderMenu1/header"
 import PowerfulSol from "../../components/PowerfulSol/PowerfulSol"
 import Container from 'react-bootstrap/Container';
@@ -13,7 +14,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import Footer from "../../components/Footer/footer"
 import TitleAndDescriptionForSection from "../../components/TextTitleForHomePage/TittleHomePage"
-import { useEffect, useRef, useState } from "react";
+
 
 const clientExperienseCommentsList = [
     {
@@ -39,6 +40,27 @@ const clientExperienseCommentsList = [
     },
 ]
 
+const iconsList = [
+    {
+        companyLogo: "./exp_1.png"
+    },
+    {
+        companyLogo: "./exp_2.png"
+    },
+    {
+        companyLogo: "./exp_3.png"
+    },
+    {
+        companyLogo: "./exp_1.png"
+    },
+    {
+        companyLogo: "./exp_2.png"
+    },
+    {
+        companyLogo: "./exp_3.png"
+    },
+]
+
 const Home = () => {
     const [currencyType, setCurrencyType] = useState("SAR")
     const [selectedClientIndex, setSelectedClientIndex] = useState(1);
@@ -47,25 +69,41 @@ const Home = () => {
 
     const doSliderForClients = () => {
 
-        if (selectedClientIndex == 1) {
-            setSelectedClientIndex(0);
-            return
-        }
-        if (selectedClientIndex == 0) {
-            setSelectedClientIndex(2)
-            return
-        }
-        if (selectedClientIndex == 2) {
-            setSelectedClientIndex(1)
-            return
-        }
+
 
     }
     useEffect(() => {
+
         setInterval(() => {
-            doSliderForClients();
+            setSelectedClientIndex(prevValue => {
+                if (prevValue == 1) {
+
+                    return 0
+                }
+                if (prevValue == 0) {
+
+                    return 2
+                }
+                if (prevValue == 2) {
+                    // clientShareExpContentRef.current.style.transform = "translate(0px,0px)"
+                    return 1
+                }
+            })
         }, 5000);
+
     }, [])
+
+    useEffect(() => {
+        if (selectedClientIndex == 1) {
+            clientShareExpContentRef.current.style.transform = "translate(0px,0px)"
+        }
+        if (selectedClientIndex == 0) {
+            clientShareExpContentRef.current.style.transform = "translate(880px,0px)"
+        }
+        if (selectedClientIndex == 2) {
+            clientShareExpContentRef.current.style.transform = "translate(-880px,0px)"
+        }
+    }, [selectedClientIndex])
     const selectCurrencyType = (type) => {
         setCurrencyType(type)
     }
@@ -146,9 +184,9 @@ const Home = () => {
     }
     return (
         <>
-            <div style={{ marginBottom: "100px" }}>
+            <div >
                 <Header />
-                <div className="client-list">
+                {/* <div className="client-list">
                     <div className="exp-imgs">
                         <img src="./exp_1.png" alt="client-list" />
                         <img src="./exp_2.png" alt="client-list" />
@@ -156,6 +194,20 @@ const Home = () => {
                         <img src="./exp_4.png" alt="client-list" />
                     </div>
 
+                </div> */}
+                <div className="client-list-outer-after-header">
+                    <div className="client-list-after-header">
+                        {
+                            iconsList.map((el, ind) => {
+                                return (
+                                    <div className={selectedClientIndex == ind ? "exp-imgs active-exp-img" : "exp-imgs"}>
+                                        <img src={el.companyLogo} alt="client-list" />
+                                    </div>
+                                )
+                            })
+                        }
+
+                    </div>
                 </div>
             </div>
 
@@ -222,7 +274,7 @@ const Home = () => {
                         <div className="story-numbers">
                             <div className="story-item">
                                 <div>
-                                    <span className="story-item-text"><span className="text-platform">+</span>500k</span>
+                                    <span className="story-item-text"><span className="text-platform">+</span>500K</span>
                                 </div>
                                 <div style={{ textAlign: "center", fontSize: "30px", fontWeight: "400" }}>
                                     <span style={{ color: "white" }}>
@@ -734,7 +786,7 @@ const Home = () => {
                     </div>
                     <div className="blogs-flexes">
                         <div className="blog-card blog-card-small">
-                        <img src="./blog_4.png" alt="blog-1" style={{  boxShadow: '3px 3px 3px ', filter: 'blur(3px)', position: "absolute",background: 'linear-gradient(186deg, rgba(0, 0, 0, 0) 4%, black 100%)' }} />
+                            <img src="./blog_4.png" alt="blog-1" style={{ boxShadow: '3px 3px 3px ', filter: 'blur(3px)', position: "absolute", background: 'linear-gradient(186deg, rgba(0, 0, 0, 0) 4%, black 100%)' }} />
                             <div className="blog-content-text">
                                 <div className="event-wrapper">
                                     <div className="event-blog">
@@ -743,7 +795,7 @@ const Home = () => {
                                 </div>
                                 <div className="blog-content-inner">
                                     <div className="blog-main-text">
-                                        <span style={{ color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '400',  wordWrap: 'break-word'}}>The Future of Order Management in Food & Beverage and Retail</span>
+                                        <span style={{ color: 'white', fontSize: 18, fontWeight: '400', wordWrap: 'break-word' }}>The Future of Order Management in Food & Beverage and Retail</span>
                                     </div>
                                     <div className="blog-other-info">
                                         <div className="blog-post-read-more">
@@ -792,7 +844,7 @@ const Home = () => {
                                 </div>
                                 <div className="blog-content-inner">
                                     <div className="blog-main-text">
-                                        <span>The Future of Order Management in Food & Beverage and Retail</span>
+                                        <span style={{ color: 'white', fontSize: 18, fontWeight: '400', wordWrap: 'break-word' }}>The Future of Order Management in Food & Beverage and Retail</span>
                                     </div>
                                     <div className="blog-other-info">
                                         <div className="blog-post-read-more">
@@ -856,10 +908,7 @@ const Home = () => {
                                         in Food & Beverage and Retail.</p>
                                 </div>
                                 <div className="ind-text-right">
-                                    <div className="count-down-sec">
-                                        <p className="num-count-down">03</p>
-                                        <p className="value-count-down">weeks</p>
-                                    </div>
+
                                     <div className="count-down-sec">
                                         <p className="num-count-down">03</p>
                                         <p className="value-count-down">days</p>
@@ -872,15 +921,19 @@ const Home = () => {
                                         <p className="num-count-down">03</p>
                                         <p className="value-count-down">minutes</p>
                                     </div>
+                                    <div className="count-down-sec">
+                                        <p className="num-count-down">03</p>
+                                        <p className="value-count-down">seconds</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className="ind-content-2 integration-submit">
                                 <button className="submit">
                                     <div className="slide-integ-submit">
 
-                                        <p className="int-submit-text">sign up now</p>
+                                        <p style={{ textTransform: "uppercase" }} className="int-submit-text">sign up now</p>
                                     </div>
-                                    <p className="int-submit-text">sign up now</p>
+                                    <p style={{ textTransform: "uppercase" }} className="int-submit-text">sign up now</p>
                                 </button>
                             </div>
                         </div>
@@ -902,13 +955,11 @@ const Home = () => {
                             </div>
                         </div> */}
                 </div>
-                <div className="client-share-exp-slider">
+                <div ref={clientShareExpContentRef} className="client-share-exp-slider">
+
                     {clientExperienseCommentsList.map((comm, index) => {
                         return (
-                            <div style={selectedClientIndex == 0 ? { transform: "translate(880px,0px)" } :
-                                selectedClientIndex == 1 ? { transform: "translate(0px,0px)" } :
-                                    selectedClientIndex == 2 ? { transform: "translate(-880px,0px)" } : {}
-                            } className={selectedClientIndex == index ? "client-share-exp-content active-comment" : "client-share-exp-content"}>
+                            <div className={index == selectedClientIndex ? "client-share-exp-content active-comment" : "client-share-exp-content"}>
                                 <div className="client-img">
                                     <img src={comm.profPicPath} alt="client-img" />
                                 </div>
@@ -966,28 +1017,19 @@ const Home = () => {
                         </div>
                     </div> */}
                 </div>
-                <div className="client-list">
-                    {
-                        clientExperienseCommentsList.map((el, ind) => {
-                            return (
-                                <div className={selectedClientIndex == ind ? "exp-imgs active-exp-img" : "exp-imgs"}>
-                                    <img src={el.companyLogo} alt="client-list" />
-                                </div>
-                            )
-                        })
-                    }
+                <div className="client-list-outer">
+                    <div className="client-list">
+                        {
+                            iconsList.map((el, ind) => {
+                                return (
+                                    <div className={selectedClientIndex == ind ? "exp-imgs active-exp-img" : "exp-imgs"}>
+                                        <img src={el.companyLogo} alt="client-list" />
+                                    </div>
+                                )
+                            })
+                        }
 
-                    {/* <div className="exp-imgs">
-                        <img src="./exp_2.png" alt="client-list" />
                     </div>
-                    <div className="exp-imgs">
-                        <img src="./exp_3.png" alt="client-list" />
-                    </div>
-                    <div className="exp-imgs">
-                        <img src="./exp_4.png" alt="client-list" />
-                    </div> */}
-
-
                 </div>
             </div>
             <Container>
@@ -996,7 +1038,193 @@ const Home = () => {
                     <div className="overlay-content-transform-business">
 
                         <div className="v-slider">
-                            <img src="./cards_playing.png" alt="cards_playing" />
+
+                            <div className="v-slider-1">
+                                <div className="main-slider-section">
+                                    <img src="./slider_1.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_2.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_3.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_4.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_5.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_6.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_7.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_8.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_9.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_10.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_1.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_2.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_3.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_4.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_5.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_6.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_7.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_8.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_9.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_10.png" alt="cards_playing" />
+                                </div>
+                            </div>
+                            <div className="v-slider-2">
+                                <div className="main-slider-section">
+                                    <img src="./slider_1.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_2.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_3.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_4.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_5.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_6.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_7.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_8.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_9.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_10.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_1.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_2.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_3.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_4.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_5.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_6.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_7.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_8.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_9.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_10.png" alt="cards_playing" />
+                                </div>
+                            </div>
+                            <div className="v-slider-3">
+                                <div className="main-slider-section">
+                                    <img src="./slider_1.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_2.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_3.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_4.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_5.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_6.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_7.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_8.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_9.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_10.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_1.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_2.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_3.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_4.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_5.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_6.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_7.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_8.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_9.png" alt="cards_playing" />
+                                </div>
+                                <div className="main-slider-section">
+                                    <img src="./slider_10.png" alt="cards_playing" />
+                                </div>
+                            </div>
                         </div>
                         <div className="transform-business-content">
                             <div>
