@@ -222,7 +222,7 @@ const Home = () => {
                                 <span>Meet Us</span>
                             </button>
                             <div className="lyncc-platform-text-1">
-                                <span>Lyncc Platform</span>
+                                <span>LYNNC Platform</span>
                             </div>
                         </div>
                         <div className="text-section">
@@ -238,13 +238,13 @@ const Home = () => {
                             <button className="download-lyncc-prof">
                                 <div className="slide-download-lyncc-prof">
                                     <div className="profile-download-arrow">
-                                        <img src="./arrow-up.png" alt="arrow" height={"100%"} width={"100%"} />
+                                        <img src="./arrow-up-green.png" alt="arrow" height={"70%"} width={"70%"} />
 
                                     </div>
                                     <p>Download Lyncc Profile</p>
                                 </div>
-                                <div className="profile-download-arrow">
-                                    <img src="./arrow-up.png" alt="arrow" height={"100%"} width={"100%"} />
+                                <div className="profile-download-arrow" style={{ color: '#183F30' }}>
+                                    <img src="./arrow-up.png" alt="arrow" height={"70%"} width={"70%"} />
 
                                 </div>
                                 <p>Download Lyncc Profile</p>
@@ -268,8 +268,14 @@ const Home = () => {
                         </video>
                     </div>
                     <div className="tell-story-content-inner">
-                        <div className="lyncc-tell-story-text">
-                            <p><span className="lyncc-alone">LYNNC®</span> numbers tell the Story!</p>
+                        <div  style={{display:'flex'}} className="lyncc-tell-story-text">
+                            <span className="lyncc-alone">LYNNC</span>
+
+                         
+                               <span style={{color:'white'}}>
+                            ®  </span>
+                            
+                            <p style={{marginLeft:'8px'}}> numbers tell the Story!</p>
                         </div>
                         <div className="story-numbers">
                             <div className="story-item">
@@ -378,8 +384,12 @@ const Home = () => {
                 </div> */}
                 <div className="business-challenge-outer">
                     <div className="business-challenge">
-                        <TitleAndDescriptionForSection icon={true} title={"overcome your challenges"} description={"addressing your business challenges"} />
-                        <div className="challenge-cards">
+                        <TitleAndDescriptionForSection icon={true} title={"overcome your challenges"}
+
+                         description={"addressing your business challenges"} />
+                  
+
+                        <div  className="challenge-cards">
                             <div className="sec-1">
                                 <div id="sec1C1" onMouseLeave={() => resetAllCssSec1("sec1C1")} onMouseEnter={() => onEnterMouseSec1("sec1C1")} className="single-challenge-card">
                                     <div className="challenge_text">
@@ -696,10 +706,10 @@ const Home = () => {
                                         <span>200sar</span>
                                     </div>
                                 </div>
-                                <div className="monthly-savings">
+                                <div className="annual-savings">
                                     <div className="monthly=savings-labels">
                                         <div className="monthly-text">
-                                            <span>monthly</span>
+                                            <span>Annual</span>
                                         </div>
                                         <div className="operational-text">
                                             <span>operational savings</span>
@@ -1253,13 +1263,13 @@ const Home = () => {
                                             <img src="./arrow-up.png" alt="arrow" height={"100%"} width={"100%"} />
 
                                         </div> */}
-                                        <p>Request a demo</p>
+                                        <p>Request a Demo</p>
                                     </div>
                                     <div style={{ transform: "rotate(270deg)" }} className="profile-download-arrow">
-                                        <img src="./arrow-up.png" alt="arrow" height={"100%"} width={"100%"} />
+                                        <img src="./arrow-up.png" alt="arrow" height={"50%"} width={"50%"} />
 
                                     </div>
-                                    <p>Request a demo</p>
+                                    <p>Request a Demo</p>
 
 
                                 </button>

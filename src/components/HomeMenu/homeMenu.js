@@ -45,7 +45,10 @@ export default function HomeMenu() {
                         </div>
                     </div>
                     <div className="language-dropdown">
-                        <p style={{color:"white"}}>العربية</p>
+                        <div className="globe-icon">
+                            <img src="./globe.png" width='70%' alt="language" />
+                        </div>
+                        <p style={{color:"white", fontFamily: 'Vazirmatn, sans-serif !important', fontStyle: 'normal'}}>العربية</p>
                     </div>
                 </div>
             </div>

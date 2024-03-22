@@ -57,6 +57,7 @@
     width: 276px;
     height: 60px;
     overflow: hidden;
+    margin-left: 20px;
     
     
 }
@@ -79,7 +80,7 @@
     }
 
     20% {
-        transform:translate(0px, -60px);
+        transform:translate(0px, -20px);
     }
     40% {
         transform:translate(0px, -120px);

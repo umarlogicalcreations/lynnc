@@ -7,16 +7,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 30px;
 }
 .witness_the_efficiency-title {
     /* background-color: rgba(5, 211, 93, 1); */
     width: auto;
     height: 27px;
     border-radius: 100px;
-    /* padding: 5px 25px 5px 25px; */
+    padding: 5px 25px 5px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding-bottom: 65px; */
 }
 
 .witness_the_efficiency-title p {
@@ -25,15 +27,21 @@
     font-size: 19px;
     letter-spacing: 2px;
     font-weight: 700;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Ubuntu", sans-serif !important;
+    /* padding-bottom: 65px !important;;
+    margin-bottom: 60px; */
 
 }
-
+.witness_the_efficiency-text1 {
+    /* margin-bottom: 30px; */
+}
 .witness_the_efficiency-text1 span {
     font-weight: 700;
-    font-size: 44px;
+    font-size: 44px !important;
     text-transform: capitalize;
-    font-family: "Ubuntu", sans-serif;
+    color: #183F30;
+    font-family: "Ubuntu", sans-serif !important;
+    /* margin-bottom : 65px !important; */
 }
 
 .witness_the_efficiency-text2 span {

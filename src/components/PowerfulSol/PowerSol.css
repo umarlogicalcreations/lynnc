@@ -18,6 +18,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 10px;
+    margin-top: 40px;
 }
 .powerful-content-main-heading{
     font-weight: 700;
@@ -33,6 +34,7 @@
     display: flex;
     justify-content: flex-start;
     width: 740px;
+    border-radius: 10px;
     
 }
 .man-with-cap{
@@ -58,6 +60,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    margin: 2%;
 }
 .read-more-green{
     background-color: transparent;
@@ -127,6 +130,6 @@
     font-weight: 500;
     text-transform: capitalize;
     color: white;
-    text-align: end;
+    text-align: left;
     font-family: "Ubuntu", sans-serif;
 }

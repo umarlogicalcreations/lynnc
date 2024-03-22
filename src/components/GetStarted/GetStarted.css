@@ -9,9 +9,7 @@
     border: 1px solid #C2C8B6;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  
-    
+    align-items: center;   
 }
 .get-started p{
     color: #183F30;
@@ -22,11 +20,10 @@
     color: #C2C8B6;
     font-size: 22px;
     font-weight: 600;
-    transition: color 1s ease-out;
+    transition: color 3s ease-out;
 }
 .get-started:hover{
     background-color: #183F30;
-   
     width: 231px;
     height: 69px;
     padding: 2.91px 2.3px 1.99px 30.59px;
@@ -37,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: color 6s ease-out;
 }
 .arrow{
     background-color: #183F30;

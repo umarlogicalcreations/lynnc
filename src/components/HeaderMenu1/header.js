@@ -5,10 +5,7 @@ import RevolutionText from "../RevolutionText/RevolutionText";
 
 import TrendingLine from "../TrendLine/TrendingLine";
 import ScrollDownBtn from "../ScrollDownBtn/scrolldownBtn";
-import "./header.css"
-
-
-
+import "./header.css";
 export default function Header() {
   return (
     <>

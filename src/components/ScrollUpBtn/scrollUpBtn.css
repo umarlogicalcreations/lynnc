@@ -1,21 +1,42 @@
-.ScrollUpBtnBtnStyle {
+.FooterScrollUpBtnBtnStyle {
     width: 65px;
     height: 85px;
-    background-color: #05D35D;
-    border: 10px solid white;
-    border-radius: 40px;
-    position: relative;
+    background-color: transparent;
     transform: rotate(0.5turn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none ;
+  
 }
-
-.ScrollUpBtnBtnStyle .btn-arrow-style {
+.btn-arrow-border{
+    border-bottom: 1px solid black ;
+    position: relative;
+    border-radius: 29px;
+    width: 45px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.FooterScrollUpBtnBtnStyle .btn-arrow-style {
+   
+    width: 90%;
+    height: 90%;
+    border-radius: 40px;
+    background-color: #05D35D;
+    
+    
+}
+.btn-arrow-style .arrow-style {
     top: 0;
-    position: absolute;
+    width: 40%;
+    height: auto;
+    object-fit: contain;
     animation-name: scrollBtnUpAnim;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
-    
 }
 
 @keyframes scrollBtnUpAnim {
@@ -24,7 +45,7 @@
     }
 
     50% {
-        transform:translate(0px, 21px);
+        transform:translate(0px, 20px);
     }
 
     100% {
